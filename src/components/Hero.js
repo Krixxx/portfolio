@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const Header = () => {
+const Hero = () => {
   return (
-    <Wrapper className='section-center' id='about'>
+    <Wrapper className='section-center'>
       <h1>Front-end Developer</h1>
       <p>I code web apps with great interest and I do not stop learning.</p>
       <p></p>
@@ -12,9 +12,7 @@ const Header = () => {
 };
 
 const Wrapper = styled.section`
-  padding-top: 56px;
   text-align: center;
-  height: 150vh;
 `;
 
-export default Header;
+export default Hero;
