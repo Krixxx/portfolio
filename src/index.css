@@ -18,7 +18,7 @@ Global Theme Styles
   --clr-font-primary: #fff;
   --clr-font-secondary: #fff;
   --clr-theme-icon: #9ca3af;
-  --clr-primary: #ffa7c4;
+  --clr-primary: #ad8;
 }
 
 .light-theme {
@@ -27,7 +27,7 @@ Global Theme Styles
   --clr-font-primary: #282c35;
   --clr-font-secondary: #282c35;
   --clr-theme-icon: black;
-  --clr-primary: #d23669;
+  --clr-primary: #83d94a;
 }
 /*
 =============== 
@@ -52,11 +52,23 @@ body {
   font-family: 'Poppins', sans-serif;
   background: var(--clr-bcg);
   color: var(--clr-font-primary);
+  transition: all 0.3s linear;
+}
+.active {
+  color: var(--clr-primary);
 }
 .section-center {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
+}
+/*
+=============== 
+Navbar Theme Styles
+===============
+*/
+nav {
+  border-bottom: 1px solid var(--clr-bcg-secondary);
 }
 /*
 =============== 
