@@ -1,34 +1,26 @@
+import React from 'react';
 import styled from 'styled-components';
-import logo from '../assets/img/logo.svg';
+import { ThemeSelector } from '.';
 
-const Navbar = () => {
-  const linkClick = () => {
-    // TODO smooth scroll
-  };
+import { links } from '../data';
 
+const Navbar = ({ toggleTheme, theme }) => {
   return (
     <Wrapper>
-      <div className='nav-header'>
-        <div className='nav-logo'>
-          <img className='logo' src={logo} alt='kristjan logo' />
-        </div>
-      </div>
-      <div className='nav-links'>
-        <ul className='links'>
+      <div className='nav-container section-center'>
+        <div className='nav-logo'>Kristjan</div>
+        <ul className='nav-items'>
+          {links.map((link) => {
+            const { id, url, text } = link;
+
+            return (
+              <li key={id}>
+                <a href={url}>{text}</a>
+              </li>
+            );
+          })}
           <li>
-            <a href='#about' onClick={linkClick}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href='#projects' onClick={linkClick}>
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href='#contact' onClick={linkClick}>
-              Contact
-            </a>
+            <ThemeSelector theme={theme} toggleTheme={toggleTheme} />
           </li>
         </ul>
       </div>
@@ -37,31 +29,26 @@ const Navbar = () => {
 };
 
 const Wrapper = styled.nav`
-  width: 90%;
-  margin: 10px auto;
+  padding: 1rem;
   display: flex;
+  justify-content: center;
   align-items: center;
+  position: sticky;
 
-  .nav-header {
-    flex: 2;
-  }
-  .nav-links {
-    flex: 1;
-  }
-  .links {
+  .nav-container {
     display: flex;
-    justify-content: space-around;
-  }
-  .links li a {
-    color: #5f5f79;
-    font-size: 18px;
-    margin: 0px 0px 0px 15px;
+    justify-content: space-between;
+    align-items: center;
   }
   .nav-logo {
-    height: 50px;
   }
-  .nav-logo img {
-    height: 100%;
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-items li {
+    margin-left: calc(1rem * (1));
   }
 `;
 

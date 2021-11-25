@@ -1,7 +1,4 @@
-import Hero from './Hero';
 import Navbar from './Navbar';
-import About from './About';
-import Projects from './Projects';
-import Contact from './Contact';
+import ThemeSelector from './ThemeSelector';
 
-export { Hero, Navbar, About, Projects, Contact };
+export { Navbar, ThemeSelector };
