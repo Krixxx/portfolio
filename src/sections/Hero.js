@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 const Hero = () => {
@@ -9,7 +10,16 @@ const Hero = () => {
           Hello, I'm <span>Kristjan Lepik</span>.
         </h1>
         <h1>I'm a self-taught full-stack web developer.</h1>
-        <button className='hero-btn'>View my work</button>
+        <Link
+          to='projects'
+          className='hero-btn'
+          spy={true}
+          smooth={true}
+          offset={-65}
+          duration={400}
+        >
+          View my work
+        </Link>
       </div>
     </Wrapper>
   );
@@ -34,7 +44,8 @@ const Wrapper = styled.section`
     font-weight: 400;
   }
   .hero-btn {
-    margin: 10px;
+    display: inline-block;
+    margin-top: 10px;
     padding: 15px;
     color: var(--clr-font-primary);
     font-family: var(--font-primary);
