@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar } from './components';
-import { Home, Projects, About, Blog } from './pages';
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Hero, Navbar, Projects, About } from './sections';
 
 const getStorageTheme = () => {
   let theme = 'light-theme';
@@ -29,16 +26,14 @@ function App() {
   }, [theme]);
 
   return (
-    <Router>
+    <>
       <Navbar toggleTheme={toggleTheme} theme={theme} />
       <div className='container'>
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route exact path='/projects' element={<Projects />} />
-          <Route exact path='/about' element={<About />} />
-        </Routes>
+        <Hero />
+        <Projects />
+        <About />
       </div>
-    </Router>
+    </>
   );
 }
 

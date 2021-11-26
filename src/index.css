@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 /*
 =============== 
 Variables
@@ -6,6 +7,9 @@ Variables
 :root {
   --max-width: 50rem;
   --border-color: #e5e7eb;
+  --clr-navbar-border: #9ca3af;
+  --font-primary: 'Roboto', sans-serif;
+  --transition: all 0.3s linear;
 }
 /*
 =============== 
@@ -19,6 +23,7 @@ Global Theme Styles
   --clr-font-secondary: #fff;
   --clr-theme-icon: #9ca3af;
   --clr-primary: #ad8;
+  /* --clr-blur-background: rgba(40, 44, 53, 0.3); */
 }
 
 .light-theme {
@@ -28,6 +33,7 @@ Global Theme Styles
   --clr-font-secondary: #282c35;
   --clr-theme-icon: black;
   --clr-primary: #83d94a;
+  /* --clr-blur-background: rgba(255, 255, 255, 0.3); */
 }
 /*
 =============== 
@@ -49,13 +55,13 @@ li {
   list-style-type: none;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-primary);
   background: var(--clr-bcg);
   color: var(--clr-font-primary);
-  transition: all 0.3s linear;
+  transition: var(--transition);
 }
-.active {
-  color: var(--clr-primary);
+html {
+  scroll-behavior: smooth;
 }
 .section-center {
   width: 90vw;
@@ -68,8 +74,12 @@ Navbar Theme Styles
 ===============
 */
 nav {
-  border-bottom: 1px solid var(--clr-bcg-secondary);
+  border-bottom: 1px solid var(--clr-navbar-border);
 }
+.blur-bar {
+  background-color: var(--clr-blur-background);
+}
+
 /*
 =============== 
 Theme Selector Styles

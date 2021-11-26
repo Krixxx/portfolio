@@ -1,10 +1,8 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-import { ThemeSelector } from '.';
+import { ThemeSelector } from '../components';
 import logo from '../assets/img/apple-touch-icon.png';
-
-import { links } from '../data';
 
 const Navbar = ({ toggleTheme, theme }) => {
   return (
@@ -16,15 +14,45 @@ const Navbar = ({ toggleTheme, theme }) => {
           </a>
         </div>
         <ul className='nav-items'>
-          {links.map((link) => {
-            const { id, url, text } = link;
-
-            return (
-              <li key={id}>
-                <NavLink to={url}>{text}</NavLink>
-              </li>
-            );
-          })}
+          <li>
+            <Link
+              to='home'
+              className='single-link'
+              activeClass='active'
+              spy={true}
+              smooth={true}
+              offset={-65}
+              duration={400}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='projects'
+              className='single-link'
+              activeClass='active'
+              spy={true}
+              smooth={true}
+              offset={-65}
+              duration={400}
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='about'
+              className='single-link'
+              activeClass='active'
+              spy={true}
+              smooth={true}
+              offset={-65}
+              duration={400}
+            >
+              About
+            </Link>
+          </li>
           <li>
             <ThemeSelector theme={theme} toggleTheme={toggleTheme} />
           </li>
@@ -47,7 +75,7 @@ const Wrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    z-index: 3;
   }
   .nav-logo {
     height: 2rem;
@@ -62,6 +90,13 @@ const Wrapper = styled.nav`
   }
   .nav-items li {
     margin-left: calc(1rem * (1));
+  }
+  .single-link {
+    transition: color 0.5s;
+    cursor: pointer;
+  }
+  .active {
+    color: var(--clr-primary);
   }
   .blur-bar {
     position: fixed;
