@@ -7,7 +7,7 @@ Variables
 :root {
   --max-width: 50rem;
   --border-color: #e5e7eb;
-  --clr-navbar-border: #9ca3af;
+  --clr-navbar-border: rgba(156, 163, 175, 0.1);
   --font-primary: 'Roboto', sans-serif;
   --transition: all 0.3s linear;
 }

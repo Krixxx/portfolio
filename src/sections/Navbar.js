@@ -29,19 +29,6 @@ const Navbar = ({ toggleTheme, theme }) => {
           </li>
           <li>
             <Link
-              to='projects'
-              className='single-link'
-              activeClass='active'
-              spy={true}
-              smooth={true}
-              offset={-65}
-              duration={400}
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
               to='about'
               className='single-link'
               activeClass='active'
@@ -51,6 +38,19 @@ const Navbar = ({ toggleTheme, theme }) => {
               duration={400}
             >
               About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='projects'
+              className='single-link'
+              activeClass='active'
+              spy={true}
+              smooth={true}
+              offset={-65}
+              duration={400}
+            >
+              Projects
             </Link>
           </li>
           <li>

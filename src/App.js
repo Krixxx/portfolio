@@ -30,8 +30,8 @@ function App() {
       <Navbar toggleTheme={toggleTheme} theme={theme} />
       <div className='container'>
         <Hero />
-        <Projects />
         <About />
+        <Projects />
       </div>
     </>
   );

@@ -7,9 +7,9 @@ const Hero = () => {
     <Wrapper id='home'>
       <div className='hero'>
         <h1>
-          Hello, I'm <span>Kristjan Lepik</span>.
+          Hello, I'm <span>Kristjan</span>.
         </h1>
-        <h1>I'm a self-taught full-stack web developer.</h1>
+        <h1>I'm a self-taught front-end web developer.</h1>
         <Link
           to='projects'
           className='hero-btn'
