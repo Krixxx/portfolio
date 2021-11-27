@@ -33,6 +33,9 @@ const Wrapper = styled.section`
 
   .hero {
     text-align: center;
+
+    animation: text-in 2s both var(--bezier);
+    animation-delay: 250ms;
   }
   h1 {
     font-size: 1.75rem;
@@ -55,10 +58,25 @@ const Wrapper = styled.section`
     text-decoration: none;
     transition: all 0.4s;
     cursor: pointer;
+
+    animation: text-in 2s both var(--bezier);
+    animation-delay: 500ms;
   }
   .hero-btn:hover {
     background-color: var(--clr-primary);
   }
+
+  @keyframes text-in {
+    0% {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     h1 {
       font-size: 3rem;
