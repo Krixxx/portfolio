@@ -38,7 +38,7 @@ const Wrapper = styled.section`
     animation-delay: 250ms;
   }
   h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     transition: font-size 0.4s;
     font-weight: 100;
   }
@@ -55,6 +55,7 @@ const Wrapper = styled.section`
     font-size: 1rem;
     background-color: transparent;
     border: 2px solid var(--clr-primary);
+    border-radius: 5px;
     text-decoration: none;
     transition: all 0.4s;
     cursor: pointer;

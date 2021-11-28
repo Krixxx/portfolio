@@ -23,6 +23,8 @@ Global Theme Styles
   --clr-font-primary: #fff;
   --clr-font-secondary: #fff;
   --clr-theme-icon: #9ca3af;
+  /* --clr-timeline-background: #636363; */
+  --clr-timeline-background: #3d4352;
   --clr-primary: #ad8;
   /* --clr-blur-background: rgba(40, 44, 53, 0.3); */
 }
@@ -33,6 +35,7 @@ Global Theme Styles
   --clr-font-primary: #282c35;
   --clr-font-secondary: #282c35;
   --clr-theme-icon: black;
+  --clr-timeline-background: rgb(237, 238, 240);
   --clr-primary: #83d94a;
   /* --clr-blur-background: rgba(255, 255, 255, 0.3); */
 }
