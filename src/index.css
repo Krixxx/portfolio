@@ -67,10 +67,24 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/*
+=============== 
+Section Styles
+===============
+*/
+
 .section-center {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
+}
+
+.section-center .title {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
 }
 /*
 =============== 

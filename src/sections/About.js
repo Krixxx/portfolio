@@ -40,8 +40,40 @@ const About = () => {
 
   return (
     <Wrapper id='about' className='section-center'>
-      <h1 className='about-title'>About</h1>
-      <div className='icon-carousel' data-aos='zoom-in'>
+      <h1 className='title'>About</h1>
+      <br />
+      <p>Front-end developer from Tallinn, Estonia.</p>
+      <p>
+        I have been (self) studying programming since 2019 and have been
+        involved in web development since 2020.
+      </p>
+      <br />
+      <p>
+        When it comes to programming, I am most fascinated by the limitless
+        possibilities of creating any solutions. I am always open to new
+        knowledge and want to develop into a very strong front-end developer.
+      </p>
+      <br />
+      <p>
+        In order to expand my skills and abilities, I have also studied back-end
+        development and made my basic Node knowledge clear.
+      </p>
+      <br />
+      <p>
+        During my short career as a developer, I have completed many study
+        projects as well as real-life projects, some of which are still in daily
+        use today. Production notification program as well as warehouse goods
+        receipt and delivery program.
+      </p>
+      <br />
+      <p>
+        Today I learn and program in addition to my main job, but my goal is to
+        find a job as a full-time developer.
+      </p>
+      <br />
+      <h3 className='sub-title'>Technologies I've been working with:</h3>
+      {/* <div className='icon-carousel' data-aos='zoom-in'> */}
+      <div className='icon-carousel'>
         <ul className='list'>
           <li>
             <img src={html} alt='html' />
@@ -60,36 +92,8 @@ const About = () => {
           </li>
         </ul>
       </div>
-      {/* <div className='about-txt'>
-        <p>I've been learning programming since July 2019.</p>
-        <p>I started with Android development (Java and Kotlin).</p>
-        <p>
-          I have always liked creating products. With programming - the results
-          were quite fast to show. After basic learning I made some smaller apps
-          and I also made specific warehouse management app for a company where
-          I work.
-        </p>
-        <p>
-          At the beginning of 2020 I started learning basic html/css and
-          Javascript.
-        </p>
-        <p>
-          After completing the JavaScript course in Udemy, I practiced new
-          knowledges by doing some basic websites. One of the most interesting
-          project I had, was doing website for real-estate development company.
-        </p>
-        <p>
-          I decided to move to JavaScript library when I had decent
-          understanding and feel of vanilla JS. I picked React JS.
-        </p>
-        Since then I have done smaller projects, including production
-        notification application for a company.
-        <p>
-          In October 2021 I learned Node/Express for back-end programming. I
-          made social media website to practice full MERN stack.
-        </p>
-      </div> */}
-      <VerticalTimeline className='timeline'>
+      <h3 className='sub-title'>Noticeable events:</h3>
+      <VerticalTimeline className='timeline' animate={false}>
         {timeLineElements.map((element) => {
           let isStudyIcon = element.icon === 'study';
           let showButton =
@@ -135,33 +139,39 @@ const About = () => {
 
 const Wrapper = styled.section`
   margin-bottom: 3rem;
-  h1 {
-    padding-top: 1rem;
+
+  .intro {
     text-align: center;
+  }
+  .sub-title {
+    font-weight: 400;
+    text-align: center;
+    margin: 2rem auto;
+  }
+  p {
+    text-align: justify;
   }
 
   .icon-carousel {
     margin: 1rem 0 1rem 0;
-    text-align: center;
   }
 
   .icon-carousel li {
-    height: 60px;
+    height: 50px;
   }
   .icon-carousel img {
     height: 100%;
   }
   .list {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    /* border: 2px solid var(--clr-primary); */
+    justify-content: space-around;
+    margin-bottom: 2rem;
   }
 
   /* TIMELINE */
 
   .timeline {
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .vertical-timeline {
     width: 100%;
@@ -214,11 +224,14 @@ const Wrapper = styled.section`
   }
 
   @media screen and (min-width: 768px) {
-    /* .icon-carousel li {
-      height: 5rem;
-    } */
+    .icon-carousel li {
+      height: 60px;
+    }
     .element-date {
       margin: 0 1rem;
+    }
+    .timeline {
+      margin-top: 2rem;
     }
   }
 
