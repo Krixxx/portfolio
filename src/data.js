@@ -11,7 +11,7 @@ export const timeLineElements = [
   },
   {
     id: 2,
-    title: 'Learn Node, Express, MongoDB',
+    title: 'Learned Node, Express, MongoDB',
     subtitle: 'Udemy course',
     description: 'Started learning back-end development.',
     date: 'October 2021',
@@ -29,7 +29,7 @@ export const timeLineElements = [
   },
   {
     id: 4,
-    title: 'Learn React JS',
+    title: 'Learned React JS',
     subtitle: 'Udemy course',
     description: 'Started learning JavaScript framework',
     date: 'February 2021',
@@ -47,7 +47,7 @@ export const timeLineElements = [
   },
   {
     id: 6,
-    title: 'Learn HTML, CSS, JavaScript',
+    title: 'Learned HTML, CSS, JavaScript',
     subtitle: 'Udemy course',
     description: 'Started learning web application development.',
     date: 'April 2020',
@@ -73,4 +73,29 @@ export const timeLineElements = [
   },
 ];
 
-export const projects = [];
+export const projects = [
+  {
+    id: 1,
+    slug: 'social-media-website-client',
+    title: 'Social media website - client',
+    tech: [
+      'React',
+      'html',
+      'css',
+      'styled-components',
+      'material-ui',
+      'authorization',
+      'axios',
+      'react-router-dom',
+      'useContext',
+      'useReducer',
+    ],
+    shortDesc:
+      'Fully functioning MERN application. Create and delete posts, like and unlike posts, add comments to posts, edit user data.',
+    longDesc: '',
+    imageUrl: './assets/img/portfolio/smwc.jpg',
+    thumbnailUrl: './assets/img/thumbs/swmc_thumb.jpg',
+    website: 'http:www.www.ee',
+    github: 'https://github.com/Krixxx/social-media-client',
+  },
+];

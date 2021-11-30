@@ -28,10 +28,10 @@ import 'aos/dist/aos.css';
 
 const About = () => {
   const studyIconStyles = {
-    background: '#06D6A0',
+    background: '#ad8',
   };
   const appIconStyles = {
-    background: '#f9c74f',
+    background: '#fbe04b',
   };
 
   useEffect(() => {
@@ -41,35 +41,40 @@ const About = () => {
   return (
     <Wrapper id='about' className='section-center'>
       <h1 className='title'>About</h1>
+      <div className='separator' />
       <br />
-      <p>Front-end developer from Tallinn, Estonia.</p>
-      <p>
-        I have been (self) studying programming since 2019 and have been
-        involved in web development since 2020.
-      </p>
-      <br />
-      <p>
-        When it comes to programming, I am most fascinated by the limitless
-        possibilities of creating any solutions. I am always open to new
-        knowledge and want to develop into a very strong front-end developer.
-      </p>
-      <br />
-      <p>
-        In order to expand my skills and abilities, I have also studied back-end
-        development and made my basic Node knowledge clear.
-      </p>
-      <br />
-      <p>
-        During my short career as a developer, I have completed many study
-        projects as well as real-life projects, some of which are still in daily
-        use today. Production notification program as well as warehouse goods
-        receipt and delivery program.
-      </p>
-      <br />
-      <p>
-        Today I learn and program in addition to my main job, but my goal is to
-        find a job as a full-time developer.
-      </p>
+      <div className='about-text'>
+        <p>Front-end developer from Tallinn, Estonia.</p>
+        <p>
+          I have been (self) studying programming since 2019 and have been
+          involved in web development since 2020.
+        </p>
+        <br />
+        <p>
+          When it comes to programming, I am most fascinated by the limitless
+          possibilities of creating any solutions. I am always open to new
+          knowledge and want to develop into a very strong front-end developer.
+        </p>
+        <br />
+        <p>
+          In order to expand my skills and abilities, I have also studied
+          back-end development and made my basic Node knowledge clear.
+        </p>
+        <br />
+        <p>
+          During my short career as a developer, I have completed many study
+          projects as well as real-life projects, some of which are still in
+          daily use today. As I am professionally involved in production
+          processes, my projects have also been primarily focused on improving
+          production processes - Production notification program as well as
+          warehouse goods receipt and delivery program.
+        </p>
+        <br />
+        <p>
+          Today I learn and program in addition to my main job, but my goal is
+          to find a job as a full-time developer.
+        </p>
+      </div>
       <br />
       <h3 className='sub-title'>Technologies I've been working with:</h3>
       {/* <div className='icon-carousel' data-aos='zoom-in'> */}
@@ -148,7 +153,9 @@ const Wrapper = styled.section`
     text-align: center;
     margin: 2rem auto;
   }
-  p {
+
+  .about-text p {
+    font-size: 1rem;
     text-align: justify;
   }
 
@@ -198,6 +205,7 @@ const Wrapper = styled.section`
   }
   #description {
     margin: 1.5em 0 2em 0;
+    /* font-weight: 100; */
   }
   .button {
     text-decoration: none;
@@ -217,13 +225,17 @@ const Wrapper = styled.section`
     background-color: rgb(98, 211, 164);
   }
   .app-button {
-    border-color: rgb(241, 201, 100);
+    border-color: rgb(251, 224, 75);
   }
   .app-button:hover {
-    background-color: rgb(241, 201, 100);
+    background-color: rgb(251, 224, 75);
   }
 
   @media screen and (min-width: 768px) {
+    .about-text p {
+      font-size: 1.15rem;
+    }
+
     .icon-carousel li {
       height: 60px;
     }
