@@ -54,6 +54,19 @@ const Navbar = ({ toggleTheme, theme }) => {
             </Link>
           </li>
           <li>
+            <Link
+              to='contact'
+              className='single-link'
+              activeClass='active'
+              spy={true}
+              smooth={true}
+              offset={-65}
+              duration={400}
+            >
+              Contact
+            </Link>
+          </li>
+          <li>
             <ThemeSelector theme={theme} toggleTheme={toggleTheme} />
           </li>
         </ul>

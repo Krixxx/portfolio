@@ -78,6 +78,8 @@ const About = () => {
       <br />
       <h3 className='sub-title'>Technologies I've been working with:</h3>
       {/* <div className='icon-carousel' data-aos='zoom-in'> */}
+      <div className='separator' />
+
       <div className='icon-carousel'>
         <ul className='list'>
           <li>
@@ -151,7 +153,7 @@ const Wrapper = styled.section`
   .sub-title {
     font-weight: 400;
     text-align: center;
-    margin: 2rem auto;
+    margin: 2rem auto 1rem auto;
   }
 
   .about-text p {
@@ -160,7 +162,7 @@ const Wrapper = styled.section`
   }
 
   .icon-carousel {
-    margin: 1rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
   }
 
   .icon-carousel li {

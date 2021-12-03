@@ -9,7 +9,7 @@ const Hero = () => {
         <h1>
           Hello, I'm <span>Kristjan</span>.
         </h1>
-        <h1>I'm a self-taught front-end web developer.</h1>
+        <h1>A self-taught front-end web developer.</h1>
         <Link
           to='projects'
           className='hero-btn'

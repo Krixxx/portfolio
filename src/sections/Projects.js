@@ -1,26 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ProjectCard } from '../components';
+
+import { projects } from '../data';
 
 const Projects = () => {
   return (
     <Wrapper id='projects' className='section-center'>
-      <h1 className='title'>Latest works</h1>
+      <h1 className='title'>Projects</h1>
       <div className='separator' />
       <br />
-      <p className='projects-text'>
-        Here is the portfolio of latest projects I've finished. Each project has
-        a link to github and a link to a website (where possible).
+      <p>
+        Here are some of my projects. For real-life use and also for learning
+        purposes.
       </p>
-      <div className='projects-center'>
-        {/* single product */}
-        <article className='project'></article>
+      <br />
+      <div className='projects-container'>
+        {projects.map((project) => {
+          return <ProjectCard key={project.id} project={project} />;
+        })}
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  height: 100vh;
+  .projects-container {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  p {
+    text-align: center;
+  }
 `;
 
 export default Projects;
