@@ -52,16 +52,50 @@ const ProjectCard = ({ project }) => {
           </div>
         </div>
       </Wrapper>
-      {open ? (
-        <Modal className='modal'>
-          <div className='modal-content'>
-            <span className='close' onClick={closeModal}>
+      {open && (
+        <Modal className='modal' onClick={() => closeModal()}>
+          <div className='modal-content' onClick={(e) => e.stopPropagation()}>
+            <span className='close' onClick={() => closeModal()}>
               &times;
             </span>
-            <p>some modal text</p>
+            <h1 className='modal-title title'>{title}</h1>
+            <div className='separator' />
+            <br />
+            <div className='modal-image-container'>
+              <img className='modal-image' src={imageUrl} alt={title} />
+            </div>
+            <p className='modal-desc'>{shortDesc}</p>
+            <h4 className='modal-subtitle'>Tags</h4>
+            <div className='modal-tech-stack-container'>
+              {tech.map((item, index) => {
+                return (
+                  <div key={index} className='modal-tech-item'>
+                    {item}
+                  </div>
+                );
+              })}
+            </div>
+            <div className='modal-button-container'>
+              <a
+                className='modal-button'
+                href={website}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                {mainBtn}
+              </a>
+              <a
+                className='modal-button'
+                href={github}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Github
+              </a>
+            </div>
           </div>
         </Modal>
-      ) : null}
+      )}
     </>
   );
 };
@@ -78,10 +112,11 @@ const Modal = styled.div`
   background-color: rgba(0, 0, 0, 0.4);
 
   .modal-content {
-    background-color: #fefefe;
+    background-color: var(--clr-timeline-background);
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border-radius: 1rem;
+    max-width: var(--max-width);
     width: 80%;
   }
   .close {
@@ -95,6 +130,62 @@ const Modal = styled.div`
       color: black;
       text-decoration: none;
       cursor: pointer;
+    }
+  }
+
+  .modal-image-container {
+    text-align: center;
+  }
+  .modal-image {
+    width: 90%;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .modal-desc {
+    margin-top: 1rem;
+  }
+  .modal-subtitle {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  .modal-tech-stack-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 0.5rem auto 0.75rem auto;
+    margin-bottom: 50px;
+  }
+  .modal-tech-item {
+    font-size: 0.75rem;
+    width: auto;
+    background-color: var(--clr-tag-background);
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    border-radius: 1rem;
+    color: var(--clr-tag-text);
+  }
+  .modal-button-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-button {
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    border: 1px solid var(--clr-primary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background-color: var(--clr-primary);
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
     }
   }
 `;
@@ -115,6 +206,7 @@ const Wrapper = styled.article`
     width: 100%;
     height: 140px;
     object-fit: cover;
+    cursor: pointer;
   }
   .content-container {
     padding: 0 1rem 1rem 1rem;
