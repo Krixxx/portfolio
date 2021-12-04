@@ -152,4 +152,16 @@ export const projects = [
     website: '',
     github: 'https://github.com/Krixxx/omblus',
   },
+  {
+    id: 5,
+    title: 'Company website',
+    tech: ['Html', 'Css', 'JS'],
+    shortDesc:
+      'Learning project - creating responsive website for a small production company',
+    longDesc: '',
+    imageUrl: 'http://localhost:3000/assets/img/portfolio/kummitehas.jpeg',
+    mainBtn: 'Demo',
+    website: '',
+    github: 'https://github.com/Krixxx/omblus',
+  },
 ];

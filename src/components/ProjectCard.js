@@ -1,47 +1,103 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const ProjectCard = ({ project }) => {
   const { title, tech, shortDesc, imageUrl, mainBtn, website, github } =
     project;
+
+  const [open, setOpen] = useState(false);
+
+  const openModal = () => {
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+  };
+
   return (
-    <Wrapper>
-      <img src={imageUrl} alt={title} />
-      <div className='content-container'>
-        <h1 className='card-title'>{title}</h1>
-        <p className='card-desc'>{shortDesc}</p>
-        <h4 className='card-subtitle'>Tags</h4>
-        <div className='tech-stack-container'>
-          {tech.map((item, index) => {
-            return (
-              <div key={index} className='tech-item'>
-                {item}
-              </div>
-            );
-          })}
+    <>
+      <Wrapper>
+        <img onClick={openModal} src={imageUrl} alt={title} />
+        <div className='content-container'>
+          <h1 className='card-title'>{title}</h1>
+          <p className='card-desc'>{shortDesc}</p>
+          <h4 className='card-subtitle'>Tags</h4>
+          <div className='tech-stack-container'>
+            {tech.map((item, index) => {
+              return (
+                <div key={index} className='tech-item'>
+                  {item}
+                </div>
+              );
+            })}
+          </div>
+          <div className='button-container'>
+            <a
+              className='card-button'
+              href={website}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {mainBtn}
+            </a>
+            <a
+              className='card-button'
+              href={github}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Github
+            </a>
+          </div>
         </div>
-        <div className='button-container'>
-          <a
-            className='card-button'
-            href={website}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            {mainBtn}
-          </a>
-          <a
-            className='card-button'
-            href={github}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Github
-          </a>
-        </div>
-      </div>
-    </Wrapper>
+      </Wrapper>
+      {open ? (
+        <Modal className='modal'>
+          <div className='modal-content'>
+            <span className='close' onClick={closeModal}>
+              &times;
+            </span>
+            <p>some modal text</p>
+          </div>
+        </Modal>
+      ) : null}
+    </>
   );
 };
+
+const Modal = styled.div`
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: var(--transition);
+    &:hover,
+    &:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+`;
 
 const Wrapper = styled.article`
   position: relative;
