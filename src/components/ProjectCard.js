@@ -94,10 +94,10 @@ const Wrapper = styled.article`
     width: auto;
 
     /* background-color: var(--clr-timeline-background); */
-    background-color: rgba(170, 221, 136, 0.2);
+    background-color: var(--clr-tag-background);
     padding: 0.25rem 1rem 0.25rem 1rem;
     border-radius: 1rem;
-    color: #83d94a;
+    color: var(--clr-tag-text);
   }
   .button-container {
     position: absolute;

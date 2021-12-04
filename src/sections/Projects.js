@@ -11,8 +11,8 @@ const Projects = () => {
       <div className='separator' />
       <br />
       <p>
-        Here are some of my projects. For real-life use and also for learning
-        purposes.
+        Here are some of my projects. Made for real-life use and also for
+        learning purposes.
       </p>
       <br />
       <div className='projects-container'>
