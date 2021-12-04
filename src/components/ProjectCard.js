@@ -18,8 +18,8 @@ const ProjectCard = ({ project }) => {
   return (
     <>
       <Wrapper>
-        <img onClick={openModal} src={imageUrl} alt={title} />
-        <div className='content-container'>
+        <img onClick={() => openModal()} src={imageUrl} alt={title} />
+        {/* <div className='content-container'> 
           <h1 className='card-title'>{title}</h1>
           <p className='card-desc'>{shortDesc}</p>
           <h4 className='card-subtitle'>Tags</h4>
@@ -50,7 +50,7 @@ const ProjectCard = ({ project }) => {
               Github
             </a>
           </div>
-        </div>
+        </div> */}
       </Wrapper>
       {open && (
         <Modal className='modal' onClick={() => closeModal()}>
@@ -108,8 +108,10 @@ const Modal = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
+  justify-content: center;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.5s;
 
   .modal-content {
     background-color: var(--clr-timeline-background);
@@ -137,7 +139,7 @@ const Modal = styled.div`
     text-align: center;
   }
   .modal-image {
-    width: 90%;
+    width: 80%;
     object-fit: cover;
     border-radius: 1rem;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
@@ -204,10 +206,12 @@ const Wrapper = styled.article`
   }
   img {
     width: 100%;
-    height: 140px;
+    height: 100%;
     object-fit: cover;
     cursor: pointer;
   }
+
+  /*  
   .content-container {
     padding: 0 1rem 1rem 1rem;
     display: flex;
@@ -240,8 +244,6 @@ const Wrapper = styled.article`
   .tech-item {
     font-size: 0.75rem;
     width: auto;
-
-    /* background-color: var(--clr-timeline-background); */
     background-color: var(--clr-tag-background);
     padding: 0.25rem 1rem 0.25rem 1rem;
     border-radius: 1rem;
@@ -257,7 +259,6 @@ const Wrapper = styled.article`
     gap: 1rem;
   }
   .card-button {
-    /* background-color: var(--clr-primary); */
     padding: 0.25rem 1rem 0.25rem 1rem;
     border: 1px solid var(--clr-primary);
     border-radius: 5px;
@@ -269,7 +270,8 @@ const Wrapper = styled.article`
       background-color: var(--clr-primary);
       box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
     }
-  }
+  } 
+  */
 `;
 
 export default ProjectCard;

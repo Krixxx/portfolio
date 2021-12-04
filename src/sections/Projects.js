@@ -28,7 +28,7 @@ const Wrapper = styled.section`
   .projects-container {
     width: 100%;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 2rem;
