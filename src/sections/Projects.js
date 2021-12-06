@@ -14,6 +14,7 @@ const Projects = () => {
         Here are some of my projects. Made for real-life use and also for
         learning purposes.
       </p>
+      <p> Click on images for more information.</p>
       <br />
       <div className='projects-container'>
         {projects.map((project) => {

@@ -76,7 +76,29 @@ export const timeLineElements = [
 export const projects = [
   {
     id: 1,
+    title: 'Portfolio website',
+    mainTech: 'React',
+    tech: [
+      'React JS',
+      'Html',
+      'Css',
+      'Styled-components',
+      'React-scroll',
+      'react-vertical-timeline-component',
+      'react-icons',
+      'aos',
+    ],
+    shortDesc: 'Portfolio website',
+    longDesc: '',
+    imageUrl: 'http://localhost:3000/assets/img/portfolio/portfolio_dark.jpeg',
+    mainBtn: 'Website',
+    website: 'http://www.www.ee',
+    github: 'https://github.com/Krixxx/social-media-api',
+  },
+  {
+    id: 2,
     title: 'Social media website',
+    mainTech: 'React',
     tech: [
       'React JS',
       'Html',
@@ -98,8 +120,9 @@ export const projects = [
     github: 'https://github.com/Krixxx/social-media-client',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Social media website API',
+    mainTech: 'Node',
     tech: [
       'Node JS',
       'Express',
@@ -118,8 +141,9 @@ export const projects = [
     github: 'https://github.com/Krixxx/social-media-api',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Notification and alert app',
+    mainTech: 'React',
     tech: [
       'React JS',
       'Html',
@@ -132,7 +156,7 @@ export const projects = [
       'react-router-dom',
     ],
     shortDesc:
-      'Application for head of department in manufacturing company. Workers can ask work and send alerts in real-time to HOD dashboard. Real-life application.',
+      'Application for manufacturing company. Workers can ask work and send alerts in real-time to HOD dashboard. Real-life application.',
     longDesc: '',
     imageUrl:
       'http://localhost:3000/assets/img/portfolio/production_dashboard.jpeg',
@@ -141,11 +165,60 @@ export const projects = [
     github: 'https://github.com/Krixxx/omblus',
   },
   {
-    id: 4,
+    id: 5,
+    title: 'E-Commerce Project',
+    mainTech: 'React',
+    tech: [
+      'React JS',
+      'Html',
+      'Css',
+      'Axios',
+      'Stripe payment',
+      'Styled-components',
+      'auth0',
+      'useReducer',
+      'useContext',
+      'react-router-dom',
+    ],
+    shortDesc:
+      'Udemy course learning project. Basic functionality of e-commerce website. Filtering products with multiple ways, checkout, making payment with stripe, authorization with auth0.',
+    longDesc: '',
+    imageUrl: 'http://localhost:3000/assets/img/portfolio/store_sample.jpeg',
+    mainBtn: 'Demo',
+    website: '',
+    github: 'https://github.com/Krixxx/store-sample',
+  },
+  {
+    id: 6,
+    title: 'Search Github Users',
+    mainTech: 'React',
+    tech: [
+      'React JS',
+      'Html',
+      'Css',
+      'Styled-components',
+      'auth0',
+      'Axios',
+      'React Icons',
+      'Fusioncharts',
+      'Context',
+      'react-router-dom',
+    ],
+    shortDesc:
+      'Udemy course learning project. Fetch data from API, use react-router-dom for pages, Fusioncharts for charting and auth0 for authentication.',
+    longDesc: '',
+    imageUrl: 'http://localhost:3000/assets/img/portfolio/github_users.jpeg',
+    mainBtn: 'Demo',
+    website: '',
+    github: 'https://github.com/Krixxx/omblus',
+  },
+  {
+    id: 7,
     title: 'Real-estate website',
+    mainTech: 'JS',
     tech: ['Html', 'Css', 'JS'],
     shortDesc:
-      'Real-life project for real-estate development project. Custom floorplan solution and contact form.',
+      'Real-life project for real-estate development project. Custom floorplan solution.',
     longDesc: '',
     imageUrl: 'http://localhost:3000/assets/img/portfolio/limonaadivabrik.jpeg',
     mainBtn: 'Demo',
@@ -153,8 +226,9 @@ export const projects = [
     github: 'https://github.com/Krixxx/omblus',
   },
   {
-    id: 5,
+    id: 8,
     title: 'Company website',
+    mainTech: 'JS',
     tech: ['Html', 'Css', 'JS'],
     shortDesc:
       'Learning project - creating responsive website for a small production company',
