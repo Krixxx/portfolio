@@ -46,8 +46,8 @@ const About = () => {
       <div className='about-text'>
         <p>Front-end developer from Tallinn, Estonia.</p>
         <p>
-          I have been (self) studying programming since 2019 and have been
-          involved in web development since 2020.
+          I have been (self) studying programming since <span>2019</span> and
+          have been involved in web development since 2020.
         </p>
         <br />
         <p>
@@ -159,6 +159,10 @@ const Wrapper = styled.section`
   .about-text p {
     font-size: 1rem;
     text-align: justify;
+  }
+  .about-text span {
+    color: var(--clr-primary);
+    font-weight: 400;
   }
 
   .icon-carousel {
