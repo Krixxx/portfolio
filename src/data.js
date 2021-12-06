@@ -11,7 +11,7 @@ export const timeLineElements = [
   },
   {
     id: 2,
-    title: 'Learned Node, Express, MongoDB',
+    title: 'Node, Express, MongoDB',
     subtitle: 'Udemy course',
     description: 'Started learning back-end development.',
     date: 'October 2021',
@@ -29,9 +29,9 @@ export const timeLineElements = [
   },
   {
     id: 4,
-    title: 'Learned React JS',
+    title: 'React JS',
     subtitle: 'Udemy course',
-    description: 'Started learning JavaScript framework',
+    description: 'Started learning JavaScript framework React JS',
     date: 'February 2021',
     icon: 'study',
   },
@@ -47,7 +47,7 @@ export const timeLineElements = [
   },
   {
     id: 6,
-    title: 'Learned HTML, CSS, JavaScript',
+    title: 'HTML, CSS, JavaScript',
     subtitle: 'Udemy course',
     description: 'Started learning web application development.',
     date: 'April 2020',
@@ -93,7 +93,7 @@ export const projects = [
     imageUrl: 'http://localhost:3000/assets/img/portfolio/portfolio_dark.jpeg',
     mainBtn: 'Website',
     website: 'http://www.www.ee',
-    github: 'https://github.com/Krixxx/social-media-api',
+    github: 'https://github.com/Krixxx/portfolio',
   },
   {
     id: 2,
@@ -133,7 +133,7 @@ export const projects = [
       'Middleware',
     ],
     shortDesc:
-      'Fully functioning MERN social media application back-end. Authentication, CRUD, JWT, image upload. For learning and for portfolio.',
+      'Fully functioning MERN social media application back-end. Authentication, CRUD, JWT, image upload, server side pagination. For learning and for portfolio.',
     longDesc: '',
     imageUrl: 'http://localhost:3000/assets/img/portfolio/social_main.jpeg',
     mainBtn: 'Website',
@@ -181,7 +181,7 @@ export const projects = [
       'react-router-dom',
     ],
     shortDesc:
-      'Udemy course learning project. Basic functionality of e-commerce website. Filtering products with multiple ways, checkout, making payment with stripe, authorization with auth0.',
+      'Udemy course learning project. Basic functionality of e-commerce website. Filtering products with multiple options, checkout page, making payment with stripe, authorization with auth0.',
     longDesc: '',
     imageUrl: 'http://localhost:3000/assets/img/portfolio/store_sample.jpeg',
     mainBtn: 'Demo',
@@ -237,5 +237,18 @@ export const projects = [
     mainBtn: 'Demo',
     website: '',
     github: 'https://github.com/Krixxx/omblus',
+  },
+  {
+    id: 9,
+    title: 'Warehouse app',
+    mainTech: 'Java',
+    tech: ['Java', 'Android', 'LiveData', 'Room Database', 'MVVM architecture'],
+    shortDesc:
+      'Learning project - creating responsive website for a small production company',
+    longDesc: '',
+    imageUrl: 'http://localhost:3000/assets/img/portfolio/kummitehas.jpeg',
+    mainBtn: 'Demo',
+    website: '',
+    github: 'https://github.com/Krixxx/Porolooniladu',
   },
 ];
