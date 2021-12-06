@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Hero, Navbar, Projects, About, Contact } from './sections';
+import { Hero, Navbar, Projects, About, Contact, Footer } from './sections';
 
 const getStorageTheme = () => {
   let theme = 'light-theme';
@@ -33,6 +33,7 @@ function App() {
         <About />
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </>
   );
