@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+
+import { RiInformationLine } from 'react-icons/ri';
+import { FaNodeJs, FaReact, FaJs, FaJava } from 'react-icons/fa';
 
 const ProjectCard = ({ project }) => {
   const {
     title,
-    cardTitle,
     tech,
+    mainTech,
     shortDesc,
     imageUrl,
     mainBtn,
@@ -23,11 +26,33 @@ const ProjectCard = ({ project }) => {
     setOpen(false);
   };
 
+  //prevent scrolling on main page when modal is open.
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [open]);
+
   return (
     <>
       <Wrapper>
-        <img onClick={() => openModal()} src={imageUrl} alt={title} />
-        {/* <h3 className='card-title'>{cardTitle}</h3> */}
+        <img src={imageUrl} alt={title} />
+        <div className='tech-icon'>
+          {mainTech === 'React' ? (
+            <FaReact style={{ color: 'rgb(94,218,250)' }} />
+          ) : mainTech === 'Node' ? (
+            <FaNodeJs style={{ color: 'rgb(64,133,64)' }} />
+          ) : mainTech === 'JS' ? (
+            <FaJs style={{ color: 'rgb(252,220,42)' }} />
+          ) : (
+            <FaJava style={{ color: 'rgb(255,0,22)' }} />
+          )}
+        </div>
+        <div onClick={() => openModal()} className='info-background'>
+          <RiInformationLine className='zoom-icon' />
+        </div>
       </Wrapper>
       {open && (
         <Modal className='modal' onClick={() => closeModal()}>
@@ -92,10 +117,10 @@ const Modal = styled.div`
 
   .modal-content {
     background-color: var(--clr-timeline-background);
-    margin: 15% auto;
+    margin: 5% auto;
     padding: 20px;
     border-radius: 1rem;
-    max-width: var(--max-width);
+    max-width: calc(var(--max-width) + 10%);
     width: 80%;
   }
   .close {
@@ -140,12 +165,13 @@ const Modal = styled.div`
     margin-bottom: 50px;
   }
   .modal-tech-item {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     width: auto;
     background-color: var(--clr-tag-background);
     padding: 0.25rem 1rem 0.25rem 1rem;
     border-radius: 1rem;
     color: var(--clr-tag-text);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
   }
   .modal-button-container {
     display: flex;
@@ -173,12 +199,49 @@ const Wrapper = styled.article`
   width: 250px;
   border-radius: 5px;
   overflow: hidden;
-  background-color: var(--clr-timeline-background);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
   transition: 0.3s;
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  &:hover .info-background {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  .tech-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    padding: 0.4rem;
+    transform: translate(0.2rem, 0.2rem);
+    background-color: rgba(246, 246, 246, 0.9);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+  }
+  .tech-icon svg {
+    display: block;
+    opacity: 1;
+  }
+  .info-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .zoom-icon {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.7;
+    color: var(--clr-white-1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   img {
     width: 100%;
