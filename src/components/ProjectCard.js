@@ -140,7 +140,7 @@ const Modal = styled.div`
     text-align: center;
   }
   .modal-image {
-    width: 80%;
+    width: auto;
     object-fit: cover;
     border-radius: 1rem;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
@@ -197,6 +197,7 @@ const Modal = styled.div`
 const Wrapper = styled.article`
   position: relative;
   width: 250px;
+  height: 150px;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

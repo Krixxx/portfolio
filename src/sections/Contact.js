@@ -10,18 +10,17 @@ const Contact = () => {
       <div className='separator' />
       <br />
       <p>
-        I am very interested and eager to learn and evolve in web development.
-        Both in front- and back-end.
+        I am very interested and eager to learn and evolve in software
+        development.
       </p>
-      <p>
-        Please contact me, if you have any questions or you wish to work
-        together.
-      </p>
+      <p>Contact me, if you have any questions or you wish to work together.</p>
       <ContactForm />
     </Wrapper>
   );
 };
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  text-align: center;
+`;
 
 export default Contact;

@@ -156,7 +156,7 @@ export const projects = [
       'react-router-dom',
     ],
     shortDesc:
-      'Application for manufacturing company. Workers can ask work and send alerts in real-time to HOD dashboard. Real-life application.',
+      'Application for manufacturing company. Workers can ask work and send alerts in real-time to department manager dashboard. Built in React, for back-end I used Firebase realtime database. Real-life application.',
     longDesc: '',
     imageUrl:
       'http://localhost:3000/assets/img/portfolio/production_dashboard.jpeg',
@@ -242,11 +242,18 @@ export const projects = [
     id: 9,
     title: 'Warehouse app',
     mainTech: 'Java',
-    tech: ['Java', 'Android', 'LiveData', 'Room Database', 'MVVM architecture'],
+    tech: [
+      'Java',
+      'Android',
+      'LiveData',
+      'Room Database',
+      'MVVM architecture',
+      'File import',
+    ],
     shortDesc:
-      'Learning project - creating responsive website for a small production company',
+      'Real-life project. Warehouse workers get purchase order file as input and then can start registering arrived products. In case of a problem, user can make a note in the app and eventually send raport to purchaser. Second part of app is for releasing products according to product plan. Worker get product plan to the app and then they can start marking itmes, that they have given out.',
     longDesc: '',
-    imageUrl: 'http://localhost:3000/assets/img/portfolio/kummitehas.jpeg',
+    imageUrl: 'http://localhost:3000/assets/img/portfolio/mat_ladu_1.jpeg',
     mainBtn: 'Demo',
     website: '',
     github: 'https://github.com/Krixxx/Porolooniladu',

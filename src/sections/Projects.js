@@ -12,7 +12,8 @@ const Projects = () => {
       <br />
       <p>
         Here are some of my projects. Made for real-life use and also for
-        learning purposes.
+        learning purposes. Most biggest project is social media app, where I
+        coded front-end and also back-end.
       </p>
       <p> Click on images for more information.</p>
       <br />

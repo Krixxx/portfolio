@@ -16,6 +16,7 @@ Variables
   --clr-grey-1: #282c35;
   --clr-grey-2: #3d4352;
   --clr-grey-3: #9ca3af;
+  --clr-grey-4: #c2c7cf;
   --clr-white-1: #ffffff;
   --clr-white-2: #edeef0;
   --clr-black: #000000;
@@ -49,7 +50,7 @@ Global Theme Styles
   /* --clr-tag-background: rgba(156, 163, 175, 0.3); */
   --clr-tag-background: var(--clr-white-1);
   --clr-tag-text: var(--clr-green-1);
-  --clr-footer-bcg: var(--clr-grey-2);
+  --clr-footer-bcg: var(--clr-grey-3);
 }
 /*
 =============== 
@@ -80,7 +81,30 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+.btn {
+  display: inline-block;
+  padding: 15px;
+  color: var(--clr-font-primary);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid var(--clr-primary);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--clr-primary);
+}
+.btn:disabled {
+  border: 2px solid var(--clr-grey-3);
+  color: var(--clr-grey-3);
+  cursor: not-allowed;
+}
+.btn[disabled]:hover {
+  background-color: transparent;
+}
 /*
 =============== 
 Section Styles

@@ -9,10 +9,10 @@ const Hero = () => {
         <h1>
           Hello, I'm <span>Kristjan</span>.
         </h1>
-        <h1>A self-taught front-end web developer.</h1>
+        <h1>A self-taught software developer.</h1>
         <Link
           to='projects'
-          className='hero-btn'
+          className='hero-btn btn'
           spy={true}
           smooth={true}
           offset={-65}
@@ -47,24 +47,9 @@ const Wrapper = styled.section`
     font-weight: 400;
   }
   .hero-btn {
-    display: inline-block;
     margin-top: 10px;
-    padding: 15px;
-    color: var(--clr-font-primary);
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    background-color: transparent;
-    border: 2px solid var(--clr-primary);
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.4s;
-    cursor: pointer;
-
     animation: text-in 2s both var(--bezier);
     animation-delay: 500ms;
-  }
-  .hero-btn:hover {
-    background-color: var(--clr-primary);
   }
 
   @keyframes text-in {

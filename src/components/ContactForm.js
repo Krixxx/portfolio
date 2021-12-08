@@ -29,52 +29,87 @@ const ContactForm = () => {
 
   const [state, handleSubmit] = useForm('xknynwkz');
 
+  console.log(state);
+
   return (
     <Form onSubmit={handleSubmit}>
-      <label htmlFor='email'>E-mail</label>
       <input
         id='email'
         type='email'
         name='email'
-        placeholder='please enter e-mail address'
+        placeholder='E-mail'
         value={contact.email}
         onChange={handleChange}
+        className='form-input'
         required
       />
       <ValidationError prefix='Email' field='email' errors={state.errors} />
-      <label htmlFor='message'>Message</label>
       <textarea
         id='message'
         name='message'
-        rows='3'
-        placeholder='type your message here'
+        rows='4'
+        placeholder='Message'
         value={contact.message}
         onChange={handleChange}
+        className='form-input'
       />
       <ValidationError prefix='Message' field='message' errors={state.errors} />
-      <label htmlFor='check'>Please check checkbox to send message!</label>
-      <input name='check' type='checkbox' onChange={handleChecked} />
-      <button type='submit' disabled={state.submitting || !checked}>
+      <div className='checkbox-container'>
+        <input name='check' type='checkbox' onChange={handleChecked} />
+        <label htmlFor='check'>Please check checkbox to send message!</label>
+      </div>
+      <button
+        type='submit'
+        className='btn submit-btn'
+        disabled={state.submitting || !checked}
+      >
         Submit
       </button>
-      {state.succeeded && <p>Your email has been sent!</p>}
+      {state.succeeded && (
+        <p className='success-msg'>Your email has been sent!</p>
+      )}
+      {state.errors.length > 0 && (
+        <p className='error-msg'>Something went wrong :(</p>
+      )}
     </Form>
   );
 };
 
 const Form = styled.form`
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: center;
 
   input,
   textarea {
-    max-width: 50%;
+    max-width: 80%;
   }
 
-  button {
-    max-width: 10rem;
+  .form-input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: var(--clr-grey-4);
+    border-radius: 5px;
+  }
+  .form-input::placeholder {
+    font-family: var(--font-primary);
+    color: var(--clr-grey-1);
+  }
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .success-msg {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--clr-green-2);
   }
 `;
 
