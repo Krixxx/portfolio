@@ -78,14 +78,16 @@ const ProjectCard = ({ project }) => {
               })}
             </div>
             <div className='modal-button-container'>
-              <a
-                className='modal-button'
-                href={website}
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                {mainBtn}
-              </a>
+              {website && (
+                <a
+                  className='modal-button'
+                  href={website}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {mainBtn}
+                </a>
+              )}
               <a
                 className='modal-button'
                 href={github}

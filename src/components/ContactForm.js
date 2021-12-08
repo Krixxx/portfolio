@@ -25,11 +25,10 @@ const ContactForm = () => {
       email: '',
       message: '',
     });
+    setChecked(false);
   };
 
   const [state, handleSubmit] = useForm('xknynwkz');
-
-  console.log(state);
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -55,7 +54,13 @@ const ContactForm = () => {
       />
       <ValidationError prefix='Message' field='message' errors={state.errors} />
       <div className='checkbox-container'>
-        <input name='check' type='checkbox' onChange={handleChecked} />
+        <input
+          name='check'
+          type='checkbox'
+          id='checkbox'
+          checked={checked}
+          onChange={handleChecked}
+        />
         <label htmlFor='check'>Please check checkbox to send message!</label>
       </div>
       <button
@@ -104,6 +109,10 @@ const Form = styled.form`
     align-items: center;
     justify-content: center;
     gap: 1rem;
+  }
+  .submit-btn {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   .success-msg {
     padding: 0.75rem;

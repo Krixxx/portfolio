@@ -92,7 +92,7 @@ export const projects = [
     longDesc: '',
     imageUrl: 'http://localhost:3000/assets/img/portfolio/portfolio_dark.jpeg',
     mainBtn: 'Website',
-    website: 'http://www.www.ee',
+    website: '',
     github: 'https://github.com/Krixxx/portfolio',
   },
   {
@@ -116,7 +116,7 @@ export const projects = [
     longDesc: '',
     imageUrl: 'http://localhost:3000/assets/img/portfolio/social_main.jpeg',
     mainBtn: 'Website',
-    website: 'http://www.www.ee',
+    website: '',
     github: 'https://github.com/Krixxx/social-media-client',
   },
   {
@@ -137,7 +137,7 @@ export const projects = [
     longDesc: '',
     imageUrl: 'http://localhost:3000/assets/img/portfolio/social_main.jpeg',
     mainBtn: 'Website',
-    website: 'http://www.www.ee',
+    website: '',
     github: 'https://github.com/Krixxx/social-media-api',
   },
   {
@@ -161,7 +161,7 @@ export const projects = [
     imageUrl:
       'http://localhost:3000/assets/img/portfolio/production_dashboard.jpeg',
     mainBtn: 'Demo',
-    website: '',
+    website: 'https://production-notification-krix.netlify.app',
     github: 'https://github.com/Krixxx/omblus',
   },
   {
@@ -185,7 +185,7 @@ export const projects = [
     longDesc: '',
     imageUrl: 'http://localhost:3000/assets/img/portfolio/store_sample.jpeg',
     mainBtn: 'Demo',
-    website: '',
+    website: 'https://store-sample-krix.netlify.app/',
     github: 'https://github.com/Krixxx/store-sample',
   },
   {
@@ -209,8 +209,8 @@ export const projects = [
     longDesc: '',
     imageUrl: 'http://localhost:3000/assets/img/portfolio/github_users.jpeg',
     mainBtn: 'Demo',
-    website: '',
-    github: 'https://github.com/Krixxx/omblus',
+    website: 'https://git-user-search-krix.netlify.app/',
+    github: 'https://github.com/Krixxx/user-search',
   },
   {
     id: 7,
