@@ -158,8 +158,7 @@ export const projects = [
     shortDesc:
       'Application for manufacturing company. Workers can ask work and send alerts in real-time to department manager dashboard. Built in React, for back-end I used Firebase realtime database. Real-life application.',
     longDesc: '',
-    imageUrl:
-      'http://localhost:3000/assets/img/portfolio/production_dashboard.jpeg',
+    imageUrl: 'http://localhost:3000/assets/img/portfolio/production.jpeg',
     mainBtn: 'Demo',
     website: 'https://production-notification-krix.netlify.app',
     github: 'https://github.com/Krixxx/omblus',
