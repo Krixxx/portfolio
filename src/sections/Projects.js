@@ -1,10 +1,65 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { ProjectCard } from '../components';
 
-import { projects } from '../data';
+// import { projects } from '../data';
+
+// contentful import
+import Client from '../Contentful';
 
 const Projects = () => {
+  const [projects, setProjects] = useState([]);
+
+  const getProjects = useCallback(async () => {
+    try {
+      const response = await Client.getEntries({
+        content_type: 'krixPortfolioItem',
+        order: 'sys.createdAt',
+      });
+
+      const data = response.items;
+
+      if (data) {
+        const newProjects = data.map((item) => {
+          const {
+            id,
+            title,
+            mainTech,
+            tech,
+            shortDesc,
+            imageUrl,
+            mainBtn,
+            website,
+            github,
+          } = item.fields;
+
+          return {
+            id,
+            title,
+            mainTech,
+            tech,
+            shortDesc,
+            imageUrl,
+            mainBtn,
+            website,
+            github,
+          };
+        });
+
+        setProjects(newProjects);
+      } else {
+        setProjects([]);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
+  useEffect(() => {
+    getProjects();
+    console.log('hello');
+  }, [getProjects]);
+
   return (
     <Wrapper id='projects' className='section-center'>
       <h1 className='title'>Projects</h1>
