@@ -14,7 +14,7 @@ const Projects = () => {
     try {
       const response = await Client.getEntries({
         content_type: 'krixPortfolioItem',
-        order: 'sys.createdAt',
+        order: 'fields.id',
       });
 
       const data = response.items;
@@ -57,7 +57,6 @@ const Projects = () => {
 
   useEffect(() => {
     getProjects();
-    console.log('hello');
   }, [getProjects]);
 
   return (
