@@ -44,21 +44,27 @@ const About = () => {
       <div className='separator' />
       <br />
       <div className='about-text'>
-        <p>Front-end developer from Tallinn, Estonia.</p>
+        <p>A software developer from Tallinn, Estonia.</p>
+        <br />
         <p>
           I have been (self) studying programming since <span>2019</span> and
-          have been involved in web development since 2020.
+          have been involved in web app development since <span>2020</span>.
         </p>
         <br />
         <p>
           When it comes to programming, I am most fascinated by the limitless
           possibilities of creating any solutions. I am always open to new
-          knowledge and want to develop into a very strong front-end developer.
+          knowledge and want to develop into a very strong software developer.
         </p>
         <br />
         <p>
-          In order to expand my skills and abilities, I have also studied
-          back-end development and made my basic Node knowledge clear.
+          My very first programming language was <span>Java</span>. From there,
+          I wanted to expand my knowledge and get more familiar with web app
+          creation. In order to expand my skills and abilities, I have studied
+          front- and back-end web development. It began with <span>Html</span>{' '}
+          and <span>CSS</span>, followed by <span>JavaScript</span>. I am also
+          studying <span>React JS</span> as front-end framework,{' '}
+          <span>Node JS</span> and <span>Express</span> as back-end.
         </p>
         <br />
         <p>
@@ -72,7 +78,7 @@ const About = () => {
         <br />
         <p>
           Today I learn and program in addition to my main job, but my goal is
-          to find a job as a full-time developer.
+          to find a job as a full-time software developer.
         </p>
       </div>
       <br />
