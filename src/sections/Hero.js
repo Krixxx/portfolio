@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
+import Snowfall from 'react-snowfall';
 
 const Hero = () => {
   return (
@@ -21,6 +22,7 @@ const Hero = () => {
           View my work
         </Link>
       </div>
+      <Snowfall radius={[0.5, 1.2]} />
     </Wrapper>
   );
 };
@@ -33,7 +35,6 @@ const Wrapper = styled.section`
 
   .hero {
     text-align: center;
-
     animation: text-in 2s both var(--bezier);
     animation-delay: 250ms;
   }
