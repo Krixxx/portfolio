@@ -21,6 +21,7 @@ const Contact = () => {
 
 const Wrapper = styled.section`
   text-align: center;
+  margin-bottom: 2rem;
 `;
 
 export default Contact;
