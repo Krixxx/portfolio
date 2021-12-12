@@ -69,9 +69,9 @@ const ProjectCard = ({ project }) => {
             <div className='modal-image-container'>
               <img className='modal-image' src={imageUrl} alt={title} />
             </div>
-            <p className='modal-desc'>
+            <div className='modal-desc'>
               <ReactMarkdown>{shortDesc}</ReactMarkdown>
-            </p>
+            </div>
             <h4 className='modal-subtitle'>Tags</h4>
             <div className='modal-tech-stack-container'>
               {tech.map((item, index) => {
