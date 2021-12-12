@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+//react markdown fir styling project description
+import ReactMarkdown from 'react-markdown';
+
 import { RiInformationLine } from 'react-icons/ri';
 import { FaNodeJs, FaReact, FaJs, FaJava } from 'react-icons/fa';
 
@@ -66,7 +69,9 @@ const ProjectCard = ({ project }) => {
             <div className='modal-image-container'>
               <img className='modal-image' src={imageUrl} alt={title} />
             </div>
-            <p className='modal-desc'>{shortDesc}</p>
+            <p className='modal-desc'>
+              <ReactMarkdown>{shortDesc}</ReactMarkdown>
+            </p>
             <h4 className='modal-subtitle'>Tags</h4>
             <div className='modal-tech-stack-container'>
               {tech.map((item, index) => {
@@ -142,13 +147,28 @@ const Modal = styled.div`
     text-align: center;
   }
   .modal-image {
-    width: auto;
+    width: 80%;
     object-fit: cover;
     border-radius: 1rem;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
   }
   .modal-desc {
-    margin-top: 1rem;
+    width: 70%;
+    text-align: left;
+    margin: 1rem auto 0 auto;
+
+    p {
+      text-align: justify;
+    }
+
+    ul {
+      margin: 0.75rem 0px;
+      padding-left: 1rem;
+    }
+
+    ul > li {
+      list-style-type: disc;
+    }
   }
   .modal-subtitle {
     font-size: 1.5rem;
