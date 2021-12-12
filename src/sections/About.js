@@ -48,23 +48,26 @@ const About = () => {
         <br />
         <p>
           I have been (self) studying programming since <span>2019</span> and
-          have been involved in web app development since <span>2020</span>.
+          web app development since <span>2020</span>.
         </p>
         <br />
         <p>
-          When it comes to programming, I am most fascinated by the limitless
-          possibilities of creating any solutions. I am always open to new
-          knowledge and want to develop into a very strong software developer.
+          When it comes to programming, I'm most fascinated by the limitless
+          possibilities of creating any imaginable solutions. I'm always open to
+          new knowledge and want to develop into a very strong software
+          developer.
         </p>
         <br />
         <p>
-          My very first programming language was <span>Java</span>. From there,
-          I wanted to expand my knowledge and get more familiar with web app
-          creation. In order to expand my skills and abilities, I have studied
-          front- and back-end web development. It began with <span>Html</span>{' '}
-          and <span>CSS</span>, followed by <span>JavaScript</span>. I am also
-          studying <span>React JS</span> as front-end framework,{' '}
-          <span>Node JS</span> and <span>Express</span> as back-end.
+          My very first programming language was <span>Java</span>. First 'hello
+          world' app I made in Android Studio. I studied Android development
+          over a year and finally decided to expand my knowledge and get more
+          familiar with web app creation. In order to expand my skills and
+          abilities, I have studied front- and back-end web development. It
+          began with <span>Html</span> and <span>CSS</span>, followed by
+          <span> JavaScript</span>. I am also studying <span>React JS</span> as
+          front-end framework, <span>Node JS</span> and <span>Express</span> as
+          back-end.
         </p>
         <br />
         <p>
