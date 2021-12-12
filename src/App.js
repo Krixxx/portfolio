@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Hero, Navbar, Projects, About, Contact, Footer } from './sections';
 
 const getStorageTheme = () => {
-  let theme = 'light-theme';
+  let theme = 'dark-theme';
   if (localStorage.getItem('theme')) {
     theme = localStorage.getItem('theme');
   }
