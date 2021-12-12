@@ -10,8 +10,8 @@ const Contact = () => {
       <div className='separator' />
       <br />
       <p>
-        I am very interested and eager to learn and evolve in software
-        development.
+        I am very interested and eager to learn, and evolve as software
+        developer.
       </p>
       <p>Contact me, if you have any questions or you wish to work together.</p>
       <ContactForm />
