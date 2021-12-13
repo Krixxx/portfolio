@@ -103,6 +103,7 @@ const Form = styled.form`
   input,
   textarea {
     max-width: 80%;
+    font-family: var(--font-primary);
   }
 
   .form-input {
