@@ -5,6 +5,7 @@ import { useForm, ValidationError } from '@formspree/react';
 
 const ContactForm = () => {
   const [contact, setContact] = useState({
+    name: '',
     email: '',
     message: '',
   });
@@ -22,6 +23,7 @@ const ContactForm = () => {
 
   const clearData = () => {
     setContact({
+      name: '',
       email: '',
       message: '',
     });
@@ -32,6 +34,17 @@ const ContactForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
+      <input
+        id='name'
+        type='name'
+        name='name'
+        placeholder='Name'
+        value={contact.name}
+        onChange={handleChange}
+        className='form-input'
+        required
+      />
+      <ValidationError prefix='Name' field='name' errors={state.errors} />
       <input
         id='email'
         type='email'
