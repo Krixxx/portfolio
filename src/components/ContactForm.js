@@ -21,16 +21,21 @@ const ContactForm = () => {
     setChecked(!checked);
   };
 
-  const clearData = () => {
-    setContact({
-      name: '',
-      email: '',
-      message: '',
-    });
-    setChecked(false);
-  };
+  // const clearData = () => {
+  //   setContact({
+  //     name: '',
+  //     email: '',
+  //     message: '',
+  //   });
+  //   setChecked(false);
+  // };
 
-  const [state, handleSubmit] = useForm('xknynwkz');
+  const [state, handleSubmit] = useForm(process.env.REACT_APP_FORMSPREE);
+
+  // const submitData = () => {
+  //   handleSubmit();
+  //   clearData();
+  // };
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -104,6 +109,7 @@ const Form = styled.form`
   textarea {
     max-width: 80%;
     font-family: var(--font-primary);
+    font-size: 1rem;
   }
 
   .form-input {
