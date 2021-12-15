@@ -71,12 +71,12 @@ const About = () => {
         </p>
         <br />
         <p>
-          During my short career as a developer, I have completed many study
-          projects as well as real-life projects, some of which are still in
-          daily use today. As I am professionally involved in production
-          processes, my projects have also been primarily focused on improving
-          production processes - Production notification program as well as
-          warehouse goods receipt and delivery program.
+          During my short career as a developer, I have completed study projects
+          as well as real-life projects, some of which are still in daily use
+          today. As I am professionally involved in production processes, my
+          projects have also been primarily focused on improving production
+          processes - Production notification program as well as warehouse goods
+          receipt and delivery program.
         </p>
         <br />
         <p>
