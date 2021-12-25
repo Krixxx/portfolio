@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import html from '../assets/img/html.png';
@@ -22,10 +22,6 @@ import {
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-// Import AOS
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-
 const About = () => {
   const studyIconStyles = {
     background: '#ad8',
@@ -34,12 +30,8 @@ const About = () => {
     background: '#fbe04b',
   };
 
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
-
   return (
-    <Wrapper id='about' className='section-center'>
+    <Wrapper id='about' className='section-center' data-aos='fade-up'>
       <h1 className='title'>About</h1>
       <div className='separator' />
       <br />
@@ -89,7 +81,7 @@ const About = () => {
       {/* <div className='icon-carousel' data-aos='zoom-in'> */}
       <div className='separator' />
 
-      <div className='icon-carousel'>
+      <div className='icon-carousel' data-aos='fade-in'>
         <ul className='list'>
           <li>
             <img src={html} alt='html' />

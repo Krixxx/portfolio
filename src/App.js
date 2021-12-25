@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Hero, Navbar, Projects, About, Contact, Footer } from './sections';
 
+// Import AOS
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 const getStorageTheme = () => {
   let theme = 'dark-theme';
   if (localStorage.getItem('theme')) {
@@ -24,6 +28,10 @@ function App() {
     document.documentElement.className = theme;
     localStorage.setItem('theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    Aos.init({ offset: 75, duration: 1000, disable: 'mobile' });
+  }, []);
 
   return (
     <>
