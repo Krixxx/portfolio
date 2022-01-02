@@ -1,6 +1,16 @@
 export const timeLineElements = [
   {
-    id: 1,
+    id: 12,
+    title: 'MERN Memories app',
+    subtitle: 'React, Node, Express, MongoDB',
+    description:
+      'Learning project - MERN app. Create, edit, delete, like, comment posts, Authenticate with Google or by creating account.',
+    buttonText: 'Go to projects',
+    date: 'December 2021',
+    icon: 'app',
+  },
+  {
+    id: 13,
     title: 'MERN social media app',
     subtitle: 'React, Node, Express, MongoDB',
     description:
@@ -10,7 +20,7 @@ export const timeLineElements = [
     icon: 'app',
   },
   {
-    id: 2,
+    id: 14,
     title: 'Node, Express, MongoDB',
     subtitle: 'Udemy course',
     description: 'Started learning back-end development.',
@@ -18,7 +28,7 @@ export const timeLineElements = [
     icon: 'study',
   },
   {
-    id: 3,
+    id: 15,
     title: 'Production Feedback app',
     subtitle: 'React, Firebase Database, Live Notifications, auth',
     description:
@@ -28,7 +38,7 @@ export const timeLineElements = [
     icon: 'app',
   },
   {
-    id: 4,
+    id: 16,
     title: 'React JS',
     subtitle: 'Udemy course',
     description: 'Started learning JavaScript framework React JS',
@@ -36,7 +46,7 @@ export const timeLineElements = [
     icon: 'study',
   },
   {
-    id: 5,
+    id: 17,
     title: 'Real-estate website',
     subtitle: 'HTML, CSS, JavaScript',
     description:
@@ -46,7 +56,7 @@ export const timeLineElements = [
     icon: 'app',
   },
   {
-    id: 6,
+    id: 18,
     title: 'HTML, CSS, JavaScript',
     subtitle: 'Udemy course',
     description: 'Started learning web application development.',
@@ -54,7 +64,7 @@ export const timeLineElements = [
     icon: 'study',
   },
   {
-    id: 7,
+    id: 19,
     title: 'Warehouse management app',
     subtitle: 'Java, Android, MVVM, Room Database, LiveData',
     description:
@@ -64,7 +74,7 @@ export const timeLineElements = [
     icon: 'app',
   },
   {
-    id: 8,
+    id: 20,
     title: 'Started learning Android Development with Java',
     subtitle: 'Udemy course',
     description: 'My first "Hello world" app.',
